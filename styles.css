@@ -266,10 +266,13 @@ body {
     position: absolute;
     top: 0;
     right: 30px;
-    width: 500px;
+    width: 550px;
     height: 100%;
     background: transparent;
     transition: 3s;
+    animation: manipActiveHover 0.1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
 }
 
 .hero-imgHover:hover {
@@ -277,9 +280,28 @@ body {
     opacity: 0.8;
 }
 
+.hero-imgHover::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 100;
+}
+
 /* KEYFRAME ANIMATIONS */
 @keyframes showRight {
     100% {
         width: 0;
+    }
+}
+
+@keyframes manipActiveHover {
+    100% {
+        pointer-events: auto;
     }
 }
