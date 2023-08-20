@@ -60,7 +60,7 @@ body {
 }
 
 .hero {
-    background: url(images/home.jpg) no-repeat;
+    background: url(images/hero-img.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -266,7 +266,7 @@ body {
     position: absolute;
     top: 0;
     right: 30px;
-    width: 550px;
+    width: 35%;
     height: 100%;
     background: transparent;
     transition: 3s;
